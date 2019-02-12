@@ -1,7 +1,7 @@
 <?php
-$conexion = mysql_connect("localhost", "user","password");
+$conexion = mysql_connect("localhost", "lzapatazamb","");
 
-mysql_database("nombre_base_datos",$conexion);
+mysql_database("formulario",$conexion);
 
 $query = mysql_query("select * from tabla",$conexion);
 
