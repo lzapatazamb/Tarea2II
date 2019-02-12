@@ -15,6 +15,7 @@
 
    $Nombre = $_POST['Nombre'];
    $Email = $_POST['Email'];
+   $Password = $_POST['Password'];
   $sql = "INSERT INTO formulario(Nombre,Email)VALUES ('$Nombre','$Email')";
                   $result = mysqli_query($mysqli,$sql);
                   if (! $result){
