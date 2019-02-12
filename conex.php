@@ -1,18 +1,28 @@
-<?php
-$conexion = mysql_connect("localhost", "lzapatazamb","");
 
-mysql_database("formulario",$conexion);
+                 <?php
+                 include ("index.html");
+                 $mysqli = new mysqli("localhost", "lzapatazamb", "", "test");
 
-$Nombre=$POST['Nombre'];
-$Email=$POST['Email'];
+                 /* comprueba la conexión */
+                 if (mysqli_connect_errno()) {
+                     printf("Connect failed: %s\n", mysqli_connect_error());
+                     exit();
+                 }
 
-$sql="INSERT TO formulario (Nombre,Email) VALUES('$Nombre','$Email')";
-// $query = mysql_query("select * from tabla",$conexion);
-$resultado = mysql_query($sql);
-if (! $result){
-                              echo “La consulta SQL contiene errores.”.mysql_error();
-                              exit();
-               }else {echo “<center><font color=’RED’>DATOS INSERTADOS CORRECTAMENTE</font><a
-ref=’http://registro.elarenal.com.mx/ejemplo/formulario.html’>Volver</a&gt;'”;
-               }
- ?>
+                 /* selecciona bd */
+                 $mysqli->select_db("formulario");
+
+
+   $Nombre = $_POST['Nombre'];
+   $Email = $_POST['Email'];
+  $sql = "INSERT INTO formulario(Nombre,Email)VALUES ('$Nombre','$Email')";
+                  $result = mysqli_query($mysqli,$sql);
+                  if (! $result){
+                                 echo "La consulta SQL contiene errores.".mysqli_error();
+                                 exit();
+                  }else{
+                    echo "Registrado exitosamente";
+                  }
+
+                 $mysqli->close();
+                 ?>
