@@ -12,8 +12,9 @@ $mysqli->select_db("formulario");
 $Nombre = $_POST['Nombre'];
 $Email = $_POST['Email'];
 $Password = $_POST['Password'];
+$Eleccion = $_POST['Eleccion'];
 /*Agregar a tabla*/
-$sql = "INSERT INTO formulario(Nombre,Email,Password,EstadoC)VALUES ('$Nombre','$Email','$Password','null')";
+$sql = "INSERT INTO formulario(Nombre,Email,Password,EstadoC)VALUES ('$Nombre','$Email','$Password','$Eleccion')";
 $result = mysqli_query($mysqli,$sql);
   if (! $result){
      echo "La consulta SQL contiene errores.".mysqli_error();
