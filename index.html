@@ -24,17 +24,34 @@
     <div class="form-group row">
       <label for="formGroupExampleInput" class="col-sm-2 col-form-label" for="Nombre"> First Name: </label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" name="Nombre" placeholder="Laura Maribel Sanchez " required>
+        <input type="text" class="form-control" name="Nombre" placeholder="Laura Maribel  " required>
       </div>
     </div>
-    <h4>Credit card information</h4>
+    <div class="form-group row">
+      <label for="formGroupExampleInput" class="col-sm-2 col-form-label" for="Apellido"> Last Name: </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" name="Apellido" placeholder="Sanchez Zapata" required>
+      </div>
+    </div>
     <div class="form-group row">
       <label for="staticEmail" class="col-sm-2 col-form-label">Email:</label>
       <div class="col-sm-10">
         <input type="email" class="form-control" name="Email" aria-describedby="emailHelp" placeholder="lza@hotmail.com" required>
         <div class="invalid-feedback">
-          Please choose a username.
+          Porfavor ingrese un correo valido
         </div>
+      </div>
+    </div>
+    <h5 align="left">Credit card information: </h5>
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="inlineFormCustomSelectPref">Credit card type:</label>
+      <div class="col-sm-2">
+        <select class="custom-select my-1 mr-sm-2" name="Eleccion" required>
+          <option value="VISA">VISA</option>
+          <option value="MASTER CARD">MASTER CARD</option>
+          <option value="AMERICAN EXPRESS">AMERICAN EXPRESS</option>
+        </select>
+        <div class="invalid-feedback">Opcion invalida, seleccione una valida.</div>
       </div>
     </div>
     <div class="form-group row">
@@ -42,23 +59,11 @@
       <div class="col-sm-10">
         <input type="password" class="form-control" name="Password" placeholder="Password" required>
         <div class="invalid-feedback">
-          Please choose a username.
+          Ingrese una contraseña.
         </div>
       </div>
     </div>
-    <div class="form-group row">
-      <label class="col-sm-2 col-form-label" for="inlineFormCustomSelectPref">Estado civil:</label>
-      <div class="col-sm-2">
-        <select class="custom-select my-1 mr-sm-2" name="Eleccion" required>
 
-          <option value="">Escoja:</option>
-          <option value="Soltero">Soltero(a)</option>
-          <option value="Casado">Casado(a)</option>
-          <option value="Divorciado">Divorciado(a)</option>
-        </select>
-        <div class="invalid-feedback">Example invalid custom select feedback</div>
-      </div>
-    </div>
     <!--  esto es foundation-->
     <fieldset class="cell small-12">
       <input id="checkbox12" type="checkbox" required><label for="checkbox12">Checkbox si es mayor de edad y ha leido los terminos y condiciones</label>
