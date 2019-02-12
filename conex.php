@@ -16,7 +16,7 @@
    $Nombre = $_POST['Nombre'];
    $Email = $_POST['Email'];
    $Password = $_POST['Password'];
-  $sql = "INSERT INTO formulario(Nombre,Email)VALUES ('$Nombre','$Email')";
+  $sql = "INSERT INTO formulario(Nombre,Email,Password,EstadoC)VALUES ('$Nombre','$Email','$Password','null')";
                   $result = mysqli_query($mysqli,$sql);
                   if (! $result){
                                  echo "La consulta SQL contiene errores.".mysqli_error();
