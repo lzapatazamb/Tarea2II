@@ -25,12 +25,18 @@
       <label for="formGroupExampleInput" class="col-sm-2 col-form-label" for="Nombre"> First Name: </label>
       <div class="col-sm-10">
         <input type="text" class="form-control" name="Nombre" placeholder="Laura Maribel  " required>
+        <div class="invalid-feedback">
+          Please enter a valid First name
+        </div>
       </div>
     </div>
     <div class="form-group row">
       <label for="formGroupExampleInput" class="col-sm-2 col-form-label" for="Apellido"> Last Name: </label>
       <div class="col-sm-10">
         <input type="text" class="form-control" name="Apellido" placeholder="Sanchez Zapata" required>
+        <div class="invalid-feedback">
+          Please enter a valid Last Name
+        </div>
       </div>
     </div>
     <div class="form-group row">
@@ -38,7 +44,7 @@
       <div class="col-sm-10">
         <input type="email" class="form-control" name="Email" aria-describedby="emailHelp" placeholder="lza@hotmail.com" required>
         <div class="invalid-feedback">
-          Porfavor ingrese un correo valido
+          Please enter a valid email
         </div>
       </div>
     </div>
@@ -47,17 +53,19 @@
       <label class="col-sm-2 col-form-label" for="inlineFormCustomSelectPref">Credit card type:</label>
       <div class="col-sm-2">
         <select class="custom-select my-1 mr-sm-2" name="Eleccion" required>
+          <option value="">Select</option>
           <option value="VISA">VISA</option>
           <option value="MASTER CARD">MASTER CARD</option>
           <option value="AMERICAN EXPRESS">AMERICAN EXPRESS</option>
         </select>
-        <div class="invalid-feedback">Opcion invalida, seleccione una valida.</div>
+        <div class="invalid-feedback">Invalid option, select a valid one.</div>
       </div>
     </div>
     <div class="form-group row">
       <label class="col-sm-2 col-form-label" for="inlineFormCustomSelectPref">Exp. date:</label>
       <div class="col-sm-1">
         <select class="custom-select my-1 mr-sm-2" name="Eleccion1" required>
+          <option value="">Select</option>
           <option value="01">01</option>
           <option value="02">02</option>
           <option value="03">03</option>
@@ -66,23 +74,25 @@
         <div class="col-sm-1,5">
         <div class="invalid-feedback">Opcion invalida, seleccione una valida.</div>
         <select class="custom-select my-1 mr-sm-2" name="Eleccion1" required>
+          <option value="">Select</option>
           <option value="2008">2008</option>
           <option value="2009">2009</option>
           <option value="2010">2010</option>
         </select>
-        <div class="invalid-feedback">Opcion invalida, seleccione una valida.</div>
+        <div class="invalid-feedback">Invalid option, select a valid one.</div>
       </div>
     </div>
     <div class="form-group row">
       <label class="col-sm-2 col-form-label" for="inlineFormCustomSelectPref">Country:</label>
       <div class="col-sm-2">
         <select class="custom-select my-1 mr-sm-2" name="Eleccion2" required>
+          <option value="">Select</option>
           <option value="United States">United States</option>
           <option value="Colombia">Colombia</option>
           <option value="Rusia">Rusian</option>
           <option value="Rusia">Japan</option>
         </select>
-        <div class="invalid-feedback">Opcion invalida, seleccione una valida.</div>
+        <div class="invalid-feedback">Invalid option, select a valid one.</div>
       </div>
     </div>
     <h5 align="left">Billing Address: </h5>
@@ -91,7 +101,7 @@
       <div class="col-sm-10">
         <input type="password" class="form-control" name="Password" placeholder="Password" required>
         <div class="invalid-feedback">
-          Ingrese una contraseña.
+          enter a password.
         </div>
       </div>
     </div>
@@ -99,7 +109,8 @@
 
     <!--  esto es foundation-->
     <fieldset class="cell small-12">
-      <input id="checkbox12" type="checkbox" required><label for="checkbox12">Checkbox si es mayor de edad y ha leido los terminos y condiciones</label>
+      <input id="checkbox12" type="checkbox" required><label for="checkbox12">Check here to certify that you are 18 years
+      age or older and agree to the terms of this purchase  </label>
     </fieldset>
     <!--  esta aca es foundation-->
     <input type="submit" name="validar" value="Enviar"> </input>
